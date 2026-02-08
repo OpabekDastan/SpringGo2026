@@ -1,0 +1,28 @@
+### GET all tasks
+GET http://localhost:8080/tasks
+X-API-KEY: secret12345
+
+
+### CREATE task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+X-API-KEY: secret12345
+
+{
+  "title": "Write unit tests numba two"
+}
+
+
+### GET task by id
+GET http://localhost:8080/tasks?id=1
+X-API-KEY: secret12345
+
+
+### UPDATE task
+PATCH http://localhost:8080/tasks?id=1
+Content-Type: application/json
+X-API-KEY: secret12345
+
+{
+  "done": true
+}
